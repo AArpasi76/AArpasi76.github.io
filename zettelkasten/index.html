@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zettelkasten — Alexander Arpasi</title>
+<meta name="description" content="Ein Zettelkasten zur Theorie der Komposition. Jeder Zettel ist ein eigener Einstieg in eine Unterscheidung — Gruppe, Gruppendynamik, Semantische Marker, Umschlag, Doppelte Schließung.">
+<meta name="keywords" content="Zettelkasten, Komposition, Gruppe, Gruppendynamik, Semantische Marker, Umschlag, Doppelte Schließung, Systemtheorie, Alexander Arpasi">
+<meta name="robots" content="index, follow, max-snippet:-1">
+<link rel="canonical" href="https://alexanderarpasi.de/zettelkasten/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Zettelkasten",
+  "description": "Ein Zettelkasten zur Theorie der Komposition. Jeder Zettel ist ein eigener Einstieg in eine Unterscheidung.",
+  "author": { "@type": "Person", "name": "Alexander Arpasi", "url": "https://alexanderarpasi.de" },
+  "isPartOf": { "@type": "WebSite", "name": "Alexander Arpasi — Zettelkasten" },
+  "hasPart": [
+    { "@type": "ScholarlyArticle", "name": "Gruppe", "url": "https://alexanderarpasi.de/zettelkasten/gruppe" },
+    { "@type": "ScholarlyArticle", "name": "Gruppendynamik", "url": "https://alexanderarpasi.de/zettelkasten/gruppendynamik" }
+  ]
+}
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+  :root {
+    --bg: #faf9f6;
+    --text: #1e1e1e;
+    --text-soft: #5e5a54;
+    --accent: #4a3f35;
+    --accent-light: #7d7268;
+    --rule: #d6d0c7;
+    --surface: #f0ede8;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'EB Garamond', Georgia, serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  nav {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.8rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  nav .site-name {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  nav .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  nav .nav-links a {
+    font-size: 0.85rem;
+    color: var(--text-soft);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  nav .nav-links a:hover { color: var(--text); }
+  nav .nav-links a.active {
+    color: var(--accent);
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 2px;
+  }
+  .nav-rule {
+    max-width: 900px;
+    margin: 0 auto;
+    border: none;
+    border-top: 1px solid var(--rule);
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3rem 2rem 4rem;
+  }
+  h1 {
+    font-size: 2.6rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 2rem;
+  }
+  .subtitle {
+    font-size: 1.05rem;
+    color: var(--accent-light);
+    font-style: italic;
+    margin-top: -1.5rem;
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.01em;
+  }
+  .intro {
+    font-size: 1.1rem;
+    line-height: 1.75;
+    color: var(--text);
+    margin-bottom: 3rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .intro p {
+    margin-bottom: 0.9rem;
+  }
+  .intro p:last-child {
+    margin-bottom: 0;
+  }
+  .layer {
+    margin-top: 3rem;
+  }
+  .layer-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--accent-light);
+    margin-bottom: 0.3rem;
+    display: block;
+  }
+  .layer-title {
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+  }
+  .layer-note {
+    font-size: 0.98rem;
+    color: var(--text-soft);
+    line-height: 1.65;
+    margin-bottom: 1.8rem;
+    font-style: italic;
+  }
+  .zettel-card {
+    padding: 1.4rem 0;
+    border-top: 1px solid var(--rule);
+  }
+  .zettel-card:last-child {
+    border-bottom: 1px solid var(--rule);
+  }
+  .zettel-card h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+  }
+  .zettel-card h3 a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .zettel-card h3 a:hover { border-color: var(--accent); }
+  .zettel-card .pitch {
+    font-size: 1rem;
+    color: var(--text);
+    line-height: 1.7;
+    margin-bottom: 0.3rem;
+  }
+  .zettel-card .meta {
+    font-size: 0.82rem;
+    color: var(--accent-light);
+    letter-spacing: 0.04em;
+  }
+  .zettel-card.pending h3 {
+    color: var(--text-soft);
+  }
+  .zettel-card.pending .pitch {
+    color: var(--text-soft);
+  }
+  footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--accent-light);
+  }
+  footer a {
+    color: var(--accent-light);
+    text-decoration: none;
+  }
+  footer a:hover { color: var(--text); }
+  @media (max-width: 640px) {
+    nav { padding: 1.2rem 1.2rem; }
+    nav .nav-links { gap: 1.2rem; }
+    main { padding: 2rem 1.2rem 3rem; }
+    h1 { font-size: 2rem; }
+    .intro { font-size: 1.05rem; }
+    footer { flex-direction: column; gap: 0.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="site-name">Alexander Arpasi</a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Zettelkasten</a></li>
+    <li><a href="../ueber.html">Über</a></li>
+    <li><a href="../praxis.html">Praxis</a></li>
+  </ul>
+</nav>
+<hr class="nav-rule">
+
+<main>
+  <h1>Zettelkasten</h1>
+  <p class="subtitle">Ein Netz von Unterscheidungen</p>
+
+  <div class="intro">
+    <p>Jeder Zettel beginnt mit einer Frage, die nicht auflösbar ist, aber genau formuliert werden kann. Er zeigt eine Unterscheidung, nicht eine Lösung. Die Zettel sind unabhängig lesbar, aber sie verweisen aufeinander — nicht weil sie sich ergänzen, sondern weil sie dieselbe Figur in verschiedenen Winkeln zeigen.</p>
+    <p>Jeder Zettel zeigt etwa 30 Prozent des Konzepts. Die restlichen 70 Prozent und die formale Durchführung stehen im Hauptwerk <em>Komposition — Wie aus getrennten Welten etwas Gemeinsames entsteht</em>.</p>
+    <p>Die Zettel sind in drei Schichten angeordnet — Zugang, Landkarte, Fundament. Es gibt keine richtige Reihenfolge. Die meisten beginnen bei <em>Gruppe</em> oder <em>Gruppendynamik</em>, weil dort der Bruch mit der gängigen Sprache am klarsten sichtbar wird.</p>
+  </div>
+
+  <section class="layer">
+    <span class="layer-label">Zugang</span>
+    <h2 class="layer-title">Begriffe, die irritieren</h2>
+    <p class="layer-note">Zwei Zettel, die eine gängige Erwartung aufbrechen. Sie sind der einfachste Einstieg — und der, der am meisten kostet.</p>
+
+    <div class="zettel-card">
+      <h3><a href="gruppe.html">Gruppe</a></h3>
+      <p class="pitch">Gruppe ist kein Zustand, den man vorfindet. Gruppe ist ein Vollzug — der Vollzug gemeinsamer Selbstbeobachtung. Sie entsteht in dem Moment, in dem ein gemeinsames Eigenverhalten als Eigenverhalten sichtbar wird — und in keinem Moment vorher.</p>
+      <span class="meta">Begriffszettel · 2026</span>
+    </div>
+
+    <div class="zettel-card">
+      <h3><a href="gruppendynamik.html">Gruppendynamik</a></h3>
+      <p class="pitch">Gruppendynamik ist kein Verhalten von Personen. Sie beginnt dort, wo die entscheidbaren Fragen aufhören — dort, wo keine Methode mehr trägt und trotzdem etwas weitergeht.</p>
+      <span class="meta">Begriffszettel · 2026</span>
+    </div>
+  </section>
+
+  <section class="layer">
+    <span class="layer-label">Landkarte</span>
+    <h2 class="layer-title">Begriffe, die das Feld ordnen</h2>
+    <p class="layer-note">Wer die Zugänge gelesen hat, kann hier weiterlesen. Diese Zettel sind präziser, weniger provokant, sie arbeiten an der Innenstruktur der Theorie.</p>
+
+    <div class="zettel-card">
+      <h3><a href="semantische-marker.html">Semantische Marker</a></h3>
+      <p class="pitch">Der Punkt, an dem ein kommunikatives Feld seine Selektionsstruktur organisiert. Entsteht als Eigenwert aus rekursivem Gebrauch. Vital wird er, wenn er dem System ermöglicht, seine eigene Selektionsstruktur als Selektionsstruktur zu beobachten.</p>
+      <span class="meta">Begriffszettel · 2026</span>
+    </div>
+
+    <div class="zettel-card pending">
+      <h3>Umschlag</h3>
+      <p class="pitch">Der Umschlag ist nicht Veränderung im System. Er ist das Ereignis, in dem die Regel selbst diskontinuierlich wird — ein Punkt, an dem das, was vorher nicht beobachtbar war, als Eigenverhalten sichtbar wird und danach anders weiterläuft.</p>
+      <span class="meta">In Vorbereitung</span>
+    </div>
+  </section>
+
+  <section class="layer">
+    <span class="layer-label">Fundament</span>
+    <h2 class="layer-title">Die Figur darunter</h2>
+    <p class="layer-note">Der Zettel, der am weitesten hinten liegt. Ohne die Zugänge bleibt er abstrakt; mit ihnen wird er zur eigentlichen Pointe.</p>
+
+    <div class="zettel-card pending">
+      <h3>Doppelte Schließung</h3>
+      <p class="pitch">Erste Schließung: Das System operiert stabil. Zweite Schließung: Das System operiert stabil und weiß, dass es stabil operiert. Der Unterschied ist kein Zustand — er ist eine andere Art zu existieren.</p>
+      <span class="meta">In Vorbereitung</span>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span>© 2026 Alexander Arpasi</span>
+  <span><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a> · <a href="https://www.linkedin.com/in/alexander-arpasi-34238b221" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://orcid.org/0009-0005-6454-1484" target="_blank" rel="noopener">ORCID</a></span>
+</footer>
+
+</body>
+</html>
