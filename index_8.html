@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alexander Arpasi — Zettelkasten zu einer Soziologie der Komposition</title>
+<meta name="description" content="Ein Zettelkasten zu der Frage, wie aus getrennten Welten etwas Gemeinsames entsteht. Jeder Zettel öffnet eine Unterscheidung — Gruppe, Gruppendynamik, semantische Marker, Umschlag, doppelte Schließung, Rollentausch.">
+<meta name="keywords" content="Alexander Arpasi, Komposition, Raum, kommunikatives Feld, Gruppendynamik, Gruppendynamik als Umschlag, semantische Marker, doppelte Schließung, Rollentausch, Selbstbeobachtung, Systemtheorie, Zettelkasten">
+<meta name="robots" content="index, follow, max-snippet:-1">
+<link rel="canonical" href="https://alexanderarpasi.de/">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Alexander Arpasi — Zettelkasten",
+    "url": "https://alexanderarpasi.de",
+    "author": { "@type": "Person", "name": "Alexander Arpasi", "url": "https://alexanderarpasi.de" },
+    "description": "Ein Zettelkasten zu einer Soziologie der Komposition — wie aus getrennten Welten etwas Gemeinsames entsteht.",
+    "inLanguage": "de"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alexander Arpasi",
+    "url": "https://alexanderarpasi.de",
+    "jobTitle": "Unabhängiger Forscher",
+    "sameAs": [
+      "https://orcid.org/0009-0005-6454-1484",
+      "https://www.linkedin.com/in/alexander-arpasi-34238b221"
+    ],
+    "knowsAbout": ["Komposition", "Gruppendynamik als Umschlag", "Semantische Marker", "Doppelte Schließung", "Rollentausch", "Selbstbeobachtung", "Systemtheorie"],
+    "description": "Theoretiker und Organisationsentwickler. 25 Jahre operative Führung, unabhängige Forschung seit 2025. Entwickelt eine formale Grammatik dafür, wie aus getrennten Welten etwas Gemeinsames entsteht."
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Zettelkasten",
+    "isPartOf": { "@type": "WebSite", "name": "Alexander Arpasi — Zettelkasten" },
+    "hasPart": [
+      { "@type": "ScholarlyArticle", "name": "Gruppe", "url": "https://alexanderarpasi.de/zettelkasten/gruppe.html" },
+      { "@type": "ScholarlyArticle", "name": "Gruppendynamik", "url": "https://alexanderarpasi.de/zettelkasten/gruppendynamik.html" },
+      { "@type": "ScholarlyArticle", "name": "Raum", "url": "https://alexanderarpasi.de/zettelkasten/raum.html" },
+      { "@type": "ScholarlyArticle", "name": "Semantische Marker", "url": "https://alexanderarpasi.de/zettelkasten/semantische-marker.html" },
+      { "@type": "ScholarlyArticle", "name": "Umschlag", "url": "https://alexanderarpasi.de/zettelkasten/umschlag.html" },
+      { "@type": "ScholarlyArticle", "name": "Doppelte Schließung", "url": "https://alexanderarpasi.de/zettelkasten/doppelte-schliessung.html" },
+      { "@type": "ScholarlyArticle", "name": "Rollentausch", "url": "https://alexanderarpasi.de/zettelkasten/rollentausch.html" },
+      { "@type": "Article", "name": "Die Nacht, in der der Plan starb", "url": "https://alexanderarpasi.de/zettelkasten/nacht-1970.html" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "DefinedTermSet",
+    "name": "Vokabular einer Soziologie der Komposition",
+    "hasDefinedTerm": [
+      {
+        "@type": "DefinedTerm",
+        "name": "Komposition",
+        "description": "Die soziale Operation, durch die aus getrennten Welten — füreinander unzugänglich — etwas Gemeinsames entsteht: weder bloße Summe (Aggregation) noch unerklärter Sprung (Emergenz), sondern eine eigene, beschreibbare Form.",
+        "disambiguatingDescription": "Nicht die Netzwerk-Komposition bei Latour/Laux und nicht die Kunst-Komposition (Hans Arp); hier eine soziologische Operation.",
+        "inDefinedTermSet": "https://alexanderarpasi.de/"
+      },
+      {
+        "@type": "DefinedTerm",
+        "name": "Gruppendynamik als Umschlag",
+        "description": "Der Moment, in dem ein soziales System nicht seinen Inhalt ändert, sondern die Regel, nach der es kommuniziert — und dabei beginnt, sich selbst zu beobachten.",
+        "disambiguatingDescription": "Nicht die gleichnamige Briefumschlag-Teamübung; hier ein Ereignis, kein Material und keine Methode.",
+        "inDefinedTermSet": "https://alexanderarpasi.de/"
+      }
+    ]
+  }
+]
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+  :root {
+    --bg: #faf9f6;
+    --text: #1e1e1e;
+    --text-soft: #5e5a54;
+    --accent: #4a3f35;
+    --accent-light: #7d7268;
+    --rule: #d6d0c7;
+    --surface: #f0ede8;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'EB Garamond', Georgia, serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  nav {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.8rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  nav .site-name {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  nav .nav-links { display: flex; gap: 2rem; list-style: none; }
+  nav .nav-links a {
+    font-size: 0.85rem;
+    color: var(--text-soft);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  nav .nav-links a:hover { color: var(--text); }
+  .nav-rule {
+    max-width: 900px;
+    margin: 0 auto;
+    border: none;
+    border-top: 1px solid var(--rule);
+  }
+  main { max-width: 700px; margin: 0 auto; padding: 3.5rem 2rem 4rem; }
+
+  /* — Kopf — */
+  .frage {
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    margin-bottom: 1.8rem;
+  }
+  .intro p {
+    font-size: 1.12rem;
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+  .intro { padding-bottom: 2.5rem; border-bottom: 1px solid var(--rule); }
+  .intro .leitsatz {
+    font-size: 1.18rem;
+    line-height: 1.65;
+    padding: 0.9rem 0 0.9rem 1.2rem;
+    border-left: 2px solid var(--accent-light);
+    margin: 1.5rem 0;
+  }
+  .intro a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--rule); }
+  .intro a:hover { border-color: var(--accent); }
+
+  /* — Register — */
+  .layer { margin-top: 3.2rem; }
+  .layer-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--accent-light);
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  .layer-note {
+    font-size: 0.95rem;
+    color: var(--text-soft);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+
+  /* — Eintrag: Frage zuerst — */
+  .eintrag.knapp { padding: 1.05rem 0; }
+  .eintrag.knapp .q { margin-bottom: 0; }
+  .eintrag { padding: 1.35rem 0; border-top: 1px solid var(--rule); }
+  .eintrag:last-child { border-bottom: 1px solid var(--rule); }
+  .eintrag .begriff {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    color: var(--accent-light);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  .eintrag .q {
+    font-size: 1.25rem;
+    line-height: 1.45;
+    margin-bottom: 0.4rem;
+  }
+  .eintrag .q a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .eintrag .q a:hover { border-color: var(--accent); }
+  .eintrag .pitch {
+    font-size: 0.98rem;
+    color: var(--text-soft);
+    line-height: 1.65;
+  }
+
+  /* — Offene Fragen — */
+  .offen { margin-top: 3.2rem; padding-top: 2rem; border-top: 1px solid var(--rule); }
+  .offen h2 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--accent-light);
+    margin-bottom: 0.6rem;
+  }
+  .offen .note { font-size: 0.95rem; color: var(--text-soft); font-style: italic; margin-bottom: 1.2rem; }
+  .offen ul { list-style: none; }
+  .offen li {
+    font-size: 1.05rem;
+    color: var(--text);
+    padding: 0.55rem 0 0.55rem 1.1rem;
+    border-left: 2px solid var(--rule);
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+
+  /* — Person, Arbeiten, Kontakt — */
+  section.block { margin-top: 3.5rem; padding-top: 2.2rem; border-top: 1px solid var(--rule); }
+  section.block h2 { font-size: 1.35rem; font-weight: 400; margin-bottom: 1.1rem; }
+  section.block p { font-size: 1.05rem; line-height: 1.78; margin-bottom: 1rem; }
+  section.block a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--rule); }
+  section.block a:hover { border-color: var(--accent); }
+  .papers { list-style: none; margin-top: 0.4rem; }
+  .papers li { margin-bottom: 1.05rem; font-size: 1rem; line-height: 1.6; }
+  .papers .ptitle { font-style: italic; }
+  .papers .pmeta { color: var(--accent-light); font-size: 0.9rem; }
+  .identity-links { margin-top: 1.2rem; font-size: 0.95rem; color: var(--text-soft); }
+  .identity-links a { margin-right: 1.2rem; }
+
+  footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--accent-light);
+  }
+  footer a { color: var(--accent-light); text-decoration: none; }
+  footer a:hover { color: var(--text); }
+  @media (max-width: 640px) {
+    nav { padding: 1.2rem 1.2rem; }
+    nav .nav-links { gap: 1.2rem; }
+    main { padding: 2.2rem 1.2rem 3rem; }
+    .frage { font-size: 1.85rem; }
+    .intro p { font-size: 1.05rem; }
+    .eintrag .q { font-size: 1.12rem; }
+    footer { flex-direction: column; gap: 0.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="site-name">Alexander Arpasi</a>
+  <ul class="nav-links">
+    <li><a href="#arbeiten">Arbeiten</a></li>
+    <li><a href="#kontakt">Kontakt</a></li>
+  </ul>
+</nav>
+<hr class="nav-rule">
+
+<main>
+
+  <h1 class="frage">Wie entsteht aus getrennten Welten etwas Gemeinsames?</h1>
+
+  <div class="intro">
+    <p>Zehn Menschen, eine Stunde, ein Protokoll. Manche Räume antworten; andere geben nur zurück, was hineingesprochen wurde. Von außen ist das nicht zu unterscheiden — kein Protokoll, keine Evaluation, keine Messung zeigt den Unterschied. Hören kann man ihn trotzdem, in gewöhnlichen Minuten, wenn man weiß, worauf. Und er entscheidet darüber, ob aus Beiträgen etwas Gemeinsames wird.</p>
+    <p class="leitsatz">Diese Arbeit fragt nicht, was man hätte besser machen können. Sie fragt: welche unentscheidbaren Fragen behandelt dieses System gerade als entschieden?</p>
+    <p>Dies ist ein Zettelkasten zu den Unterscheidungen, mit denen sich das beobachten lässt. Jeder Zettel öffnet eine — das ist seine ganze Operation und nicht der Anfang einer längeren. Wo dieselbe Unterscheidung formal durchgeführt wird, steht am Fuß des jeweiligen Zettels. Es gibt keine richtige Reihenfolge; die meisten beginnen bei der ersten Frage. Wer lieber hört als fragt, beginnt bei der <a href="zettelkasten/nacht-1970.html">Szene</a>.</p>
+  </div>
+
+  <section class="layer">
+    <span class="layer-label">Zugang</span>
+    <p class="layer-note">Zwei Fragen, die eine gängige Erwartung aufbrechen — und die Antwort auf das, was sie zurücklassen. Der einfachste Einstieg, und der, der am meisten kostet.</p>
+
+    <div class="eintrag knapp">
+      <span class="begriff">Gruppe</span>
+      <p class="q"><a href="zettelkasten/gruppe.html">Wann sind zehn Menschen in einem Raum eine Gruppe — und wann nur zehn Menschen in einem Raum?</a></p>
+    </div>
+
+    <div class="eintrag knapp">
+      <span class="begriff">Raum</span>
+      <p class="q"><a href="zettelkasten/raum.html">Was ist da, wenn keine Gruppe da ist?</a></p>
+    </div>
+
+    <div class="eintrag">
+      <span class="begriff">Gruppendynamik</span>
+      <p class="q"><a href="zettelkasten/gruppendynamik.html">Welche Fragen sind in einem Team längst entschieden, bevor jemand sie stellt?</a></p>
+      <p class="pitch">Gruppendynamik beginnt dort, wo die entscheidbaren Fragen aufhören — wo keine Methode mehr trägt und trotzdem etwas weitergeht.</p>
+    </div>
+  </section>
+
+  <section class="layer">
+    <span class="layer-label">Landkarte</span>
+    <p class="layer-note">Präziser, weniger provokant. Diese Zettel arbeiten an der Innenstruktur.</p>
+
+    <div class="eintrag knapp">
+      <span class="begriff">Semantische Marker</span>
+      <p class="q"><a href="zettelkasten/semantische-marker.html">Was macht ein einzelnes Wort mit dem, was danach noch sagbar ist?</a></p>
+    </div>
+
+    <div class="eintrag knapp">
+      <span class="begriff">Umschlag</span>
+      <p class="q"><a href="zettelkasten/umschlag.html">Was ändert sich, wenn sich nicht der Inhalt ändert?</a></p>
+    </div>
+  </section>
+
+  <section class="layer">
+    <span class="layer-label">Fundament</span>
+    <p class="layer-note">Die Figur darunter. Ohne die Zugänge bleibt sie abstrakt; mit ihnen wird sie zur Pointe.</p>
+
+    <div class="eintrag knapp">
+      <span class="begriff">Doppelte Schließung</span>
+      <p class="q"><a href="zettelkasten/doppelte-schliessung.html">Woran hängt es, ob ein System sich selbst sehen kann?</a></p>
+    </div>
+
+    <div class="eintrag knapp">
+      <span class="begriff">Rollentausch</span>
+      <p class="q"><a href="zettelkasten/rollentausch.html">Wie beobachtet ein System das, womit es beobachtet?</a></p>
+    </div>
+  </section>
+
+  <section class="layer">
+    <span class="layer-label">Szenen</span>
+    <p class="layer-note">Kein Begriff, sondern ein Mitschnitt. Räume, deren Kommunikation auf Band liegt — man kann die halbe Sekunde anhalten und hören, wie ein Satz ankommt.</p>
+
+    <div class="eintrag">
+      <span class="begriff">Apollo 13 · 13. April 1970</span>
+      <p class="q"><a href="zettelkasten/nacht-1970.html">Wie klingt es, wenn ein Raum die Regel wechselt, nach der er spricht?</a></p>
+      <p class="pitch">Sieben Minuten lang misst ein Kontrollraum jede Meldung am Flugplan. Dann fällt eine Frage, die nicht nach dem Problem greift, sondern nach dem Maß — und neun Sekunden später beglaubigt eine Konsole ungebeten, was das Schiff noch hat.</p>
+    </div>
+  </section>
+
+  <div class="offen">
+    <h2>Offene Fragen</h2>
+    <p class="note">Woran gerade gearbeitet wird. Noch ohne Zettel.</p>
+    <ul>
+      <li>Weder bloße Summe noch unerklärter Sprung — was ist die dritte Möglichkeit?</li>
+      <li>Findet ein Nein Anschluss? Und in welche Richtung?</li>
+      <li>Warum kann ein System die Fähigkeit zur Erneuerung gerade dadurch verlieren, dass es gelingt?</li>
+    </ul>
+  </div>
+
+  <section class="block" id="wer">
+    <h2>Wer das schreibt</h2>
+    <p>Alexander Arpasi, Theoretiker und Organisationsentwickler. Fünfundzwanzig Jahre operative Führung, unabhängige Forschung seit 2025. Diese Arbeit handelt von Montagssitzungen, Kontrollräumen und Umkleidekabinen — von Räumen, in denen ich selbst gesessen habe.</p>
+    <p>Sie setzt eine Linie des Selbstbezugs fort — Spencer-Brown, Maturana, Varela, von Foerster, Luhmann — und legt sie dorthin, wo sie noch nicht lag: auf die lebendige Dynamik von Gruppen. Das Vokabular ist geerbt; die Grammatik, die es eine <em>Gruppe</em> beschreiben lässt, ist neu. Wo ein Begriff in einer anderen Tradition bereits besetzt ist, weist der jeweilige Zettel den Unterschied offen aus.</p>
+    <p>Was diese Arbeit kann, ist eines: lesen, was ein System gerade tut — ob in einem Raum etwas Gemeinsames entsteht oder nur ein Format läuft, ob Worte koppeln oder nur zirkulieren. Sie gibt keine Handlungsanweisung. Sie macht die Frage stellbar, die oben steht.</p>
+  </section>
+
+  <section class="block" id="arbeiten">
+    <h2>Arbeiten</h2>
+    <p>Die Arbeiten liegen frei zugänglich auf <strong>SSOAR</strong>. Was dort steht, ist Preprint; begutachtet ist bisher der Beitrag in der ZOE.</p>
+    <ul class="papers">
+      <li>
+        <span class="ptitle">Resonanz statt Steuerung: Semantische Marker, strukturierte Offenheit und eine andere Perspektive auf Gruppendynamik.</span>
+        <span class="pmeta">SSOAR, 2026, Preprint.</span>
+        <a href="https://nbn-resolving.org/urn:nbn:de:0168-ssoar-108078-3" target="_blank" rel="noopener">Volltext →</a>
+      </li>
+      <li>
+        <span class="ptitle">Gruppen als Resonanz: Semantische Marker, Selbstbeobachtung und kollektive Intelligenz.</span>
+        <span class="pmeta">SSOAR, 2025, Preprint.</span>
+        <a href="https://nbn-resolving.org/urn:nbn:de:0168-ssoar-105232-8" target="_blank" rel="noopener">Volltext →</a>
+      </li>
+      <li>
+        <span class="ptitle">Double Closure and Resonance: Von Foerster’s Topology as Epistemological Key to Group Dynamics.</span>
+        <span class="pmeta">SSOAR, 2025, Preprint.</span>
+        <a href="https://nbn-resolving.org/urn:nbn:de:0168-ssoar-106693-4" target="_blank" rel="noopener">Volltext →</a>
+      </li>
+      <li>
+        <span class="ptitle">Gruppendynamik als Umschlag: Wenn Systeme beginnen, sich selbst zu sehen.</span>
+        <span class="pmeta">Zeitschrift für OrganisationsEntwicklung (ZOE), Ausgabe 3/2026 — begutachtet.</span>
+      </li>
+    </ul>
+    <p class="identity-links">
+      <a href="https://orcid.org/0009-0005-6454-1484" target="_blank" rel="noopener">ORCID</a>
+      <a href="https://www.linkedin.com/in/alexander-arpasi-34238b221" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+  </section>
+
+  <section class="block" id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Ich arbeite mit Führung und Teams in Phasen der Formierung und des Umbruchs — dort, wo Methoden an ihre Grenze kommen und es darum geht, zu lesen, was ein System gerade tut. Berührt das eine Frage, an der Sie arbeiten, schreiben Sie mir: <a href="mailto:alexanderarpasi@gmail.com">alexanderarpasi@gmail.com</a>.</p>
+  </section>
+
+</main>
+
+<footer>
+  <span>&copy; 2026 Alexander Arpasi</span>
+  <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="https://www.linkedin.com/in/alexander-arpasi-34238b221" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://orcid.org/0009-0005-6454-1484" target="_blank" rel="noopener">ORCID</a></span>
+</footer>
+
+</body>
+</html>
