@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doppelte Schließung — Alexander Arpasi</title>
+<meta name="description" content="Doppelte Schließung bedeutet: Zwei Schleifen, nicht eine. Die erste verbindet Kommunikation mit Kommunikation. Die zweite verändert, wie die erste operiert. Zwischen ihnen liegt eine einzige Verbindung — und an ihr hängt, ob ein System sich selbst sehen kann.">
+<meta name="keywords" content="doppelte Schließung, Diallele, Heterarchie, Hierarchie, Selbstbeobachtung, zweite Ordnung, McCulloch, von Foerster, Anschlussregel, Gruppendynamik, Alexander Arpasi">
+<meta name="robots" content="index, follow, max-snippet:-1">
+<link rel="canonical" href="https://alexanderarpasi.de/zettelkasten/doppelte-schliessung.html">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "name": "Doppelte Schließung",
+    "headline": "Doppelte Schließung",
+    "alternativeHeadline": "Zwei Schleifen, nicht eine — und an der Verbindung zwischen ihnen hängt alles",
+    "description": "Doppelte Schließung ist die Architektur, die einem kommunikativen System Selbstbeobachtung ermöglicht. Zwei Schleifen quer zueinander: die erste verbindet Kommunikation mit Kommunikation, die zweite verändert, wie die erste operiert. Ob ein System seine eigene Anschlussregel erreicht, hängt an einer einzigen Verbindung zwischen beiden: der Diallele.",
+    "author": { "@type": "Person", "name": "Alexander Arpasi", "url": "https://alexanderarpasi.de" },
+    "datePublished": "2026-05-07",
+    "keywords": ["doppelte Schließung", "Diallele", "Heterarchie", "Hierarchie", "Selbstbeobachtung", "zweite Ordnung", "McCulloch", "von Foerster", "Anschlussregel", "Gruppendynamik", "Systemtheorie"],
+    "isPartOf": { "@type": "WebSite", "name": "Alexander Arpasi — Zettelkasten" },
+    "about": [
+      { "@type": "DefinedTerm", "name": "Doppelte Schließung", "description": "Architektur eines rekursiv operierenden Systems, das doppelt auf sich selbst geschlossen ist: zwei Schleifen quer zueinander, von denen die erste Kommunikation an Kommunikation anschließt und die zweite verändert, wie die erste operiert." },
+      { "@type": "DefinedTerm", "name": "Diallele", "description": "Die eine Verbindung, die vom innersten zum äußersten Kreis führt — McCullochs Linie, die aus Hierarchie Heterarchie macht und einem System ermöglicht, sich selbst zu beobachten." },
+      { "@type": "DefinedTerm", "name": "Anschlussregel", "description": "Die implizite Ordnung eines kommunikativen Systems, die bestimmt, was in ihm sagbar ist und was nicht — nicht beschlossen, sondern im Gebrauch entstanden." }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Was bedeutet doppelte Schließung?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Doppelte Schließung beschreibt die Architektur eines Systems, das sich selbst beobachten kann. Die erste Schließung ist die operative Verbindung: Kommunikation schließt an Kommunikation an, das System reproduziert sich. Die zweite Schließung verändert, wie die erste operiert — nicht was kommuniziert wird, sondern wie. Keine der beiden lässt sich auf die andere zurückführen, keine ist primär (Arpasi, 2026)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was ist die Diallele?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die Diallele ist ein Begriff von Warren McCulloch (1945). In seiner Topologie neuronaler Netze ist sie die eine zusätzliche Verbindung, die vom innersten zum äußersten Kreis führt. Ohne sie herrscht Hierarchie: der äußere Kreis dominiert, der innere kann nicht zurückwirken. Mit ihr entsteht Heterarchie: die Herrschaft wandert, und das System kann sich selbst beobachten. In der Kommunikation ist die Diallele die Verbindung, die es einem System ermöglicht, seine eigene Anschlussregel als Anschlussregel zu sehen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Woran hängt es, ob ein System sich selbst sehen kann?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An einer einzigen Verbindung — der Diallele. Fehlt sie, läuft das System und kann sich dabei nicht sehen: es reproduziert seine Anschlussregel, ohne sie als Regel erkennen zu können. Ist sie hergestellt, kann der Zweifel die Gewissheit erreichen, und das System beobachtet seine eigene Operationsweise. Die formale Durchführung dieser Unterscheidung steht im Aufsatz Double Closure and Resonance (SSOAR 2025)."
+        }
+      }
+    ]
+  }
+]
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+  :root {
+    --bg: #faf9f6;
+    --text: #1e1e1e;
+    --text-soft: #5e5a54;
+    --accent: #4a3f35;
+    --accent-light: #7d7268;
+    --rule: #d6d0c7;
+    --surface: #f0ede8;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'EB Garamond', Georgia, serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  nav {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.8rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  nav .site-name {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  nav .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  nav .nav-links a {
+    font-size: 0.85rem;
+    color: var(--text-soft);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  nav .nav-links a:hover { color: var(--text); }
+  nav .nav-links a.active {
+    color: var(--accent);
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 2px;
+  }
+  .nav-rule {
+    max-width: 900px;
+    margin: 0 auto;
+    border: none;
+    border-top: 1px solid var(--rule);
+  }
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 3rem 2rem 4rem;
+  }
+  h1 {
+    font-size: 2.6rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 2.5rem;
+  }
+  .answer-capsule {
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: var(--text);
+    margin-bottom: 3rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .answer-capsule .lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.6rem;
+  }
+  h2 {
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--text);
+    margin-top: 3rem;
+    margin-bottom: 1.2rem;
+  }
+  p {
+    font-size: 1.05rem;
+    margin-bottom: 1.15rem;
+    text-align: left;
+  }
+  em { font-style: italic; }
+  blockquote {
+    margin: 2rem 0;
+    padding: 0 0 0 1.5rem;
+    border-left: 2px solid var(--rule);
+    font-style: italic;
+    font-size: 1.08rem;
+    color: var(--text-soft);
+    line-height: 1.7;
+  }
+  .contrast {
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--rule);
+  }
+  .contrast > div {
+    padding: 1.4rem 1.5rem;
+    background: var(--bg);
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+  .contrast > div:last-child {
+    background: var(--surface);
+  }
+  .contrast .label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-light);
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  .horizon {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+  }
+  .horizon h2 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: var(--accent-light);
+    font-weight: 400;
+  }
+  .horizon p {
+    font-size: 0.98rem;
+    color: var(--text-soft);
+    line-height: 1.7;
+  }
+  .related {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+  }
+  .related h3 {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent-light);
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  .related ul { list-style: none; }
+  .related li {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-soft);
+  }
+  .related a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    transition: border-color 0.2s;
+  }
+  .related a:hover { border-color: var(--accent); }
+  .related li span {
+    color: var(--accent-light);
+    font-size: 0.88rem;
+  }
+  .source-block {
+    margin-top: 2.5rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.82rem;
+    color: var(--accent-light);
+    line-height: 1.6;
+  }
+  .source-block a {
+    color: var(--accent-light);
+    border-bottom: 1px solid var(--rule);
+    text-decoration: none;
+  }
+  .source-block a:hover { border-color: var(--accent-light); }
+  footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--accent-light);
+  }
+  footer a {
+    color: var(--accent-light);
+    text-decoration: none;
+  }
+  footer a:hover { color: var(--text); }
+  @media (max-width: 640px) {
+    nav { padding: 1.2rem 1.2rem; }
+    nav .nav-links { gap: 1.2rem; }
+    main { padding: 2rem 1.2rem 3rem; }
+    h1 { font-size: 2rem; }
+    .answer-capsule { font-size: 1.05rem; }
+    .answer-capsule .lead { font-size: 1.12rem; }
+    .contrast { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 0.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="site-name">Alexander Arpasi</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Zettelkasten</a></li>
+    <li><a href="../index.html#arbeiten">Arbeiten</a></li>
+  </ul>
+</nav>
+<hr class="nav-rule">
+
+<main>
+  <h1>Doppelte Schließung</h1>
+
+  <div class="answer-capsule">
+    <span class="lead">Doppelte Schließung heißt: Zwei Schleifen, nicht eine. Und an der Verbindung zwischen ihnen hängt alles.</span>
+    Die erste Schleife verbindet Kommunikation mit Kommunikation — das System reproduziert sich. Die zweite verändert, wie die erste operiert — nicht was kommuniziert wird, sondern wie. Keine der beiden lässt sich auf die andere zurückführen, keine ist die erste. Erst zusammen ermöglichen sie, was ein System braucht, um sich selbst zu sehen.
+  </div>
+
+  <h2>Eine Entdeckung und ihre Übertragung</h2>
+
+  <p>1945 fand der Neurophysiologe Warren McCulloch etwas Unerwartetes. Er untersuchte, wie Nervenzellen miteinander kommunizieren, und stieß auf Wertanomalien: Systeme, in denen A besser ist als B, B besser als C — und C besser als A. Ein Kreis. Keine Spitze. Kein höchstes Gut, von dem aus alles andere geordnet werden könnte.</p>
+
+  <p>McCulloch nannte das Heterarchie. Das Wort bedeutet: Herrschaft des anderen. Nicht Hierarchie — Herrschaft des Höheren —, sondern ein System, in dem es davon abhängt, wo man steht, wer gerade führt. Die Herrschaft wandert.</p>
+
+  <p>Der Unterschied zwischen Hierarchie und Heterarchie hängt an einer einzigen Verbindung. McCulloch zeichnete zwei Diagramme, die fast gleich aussehen. Im ersten kann der äußere Kreis den inneren hemmen, aber nicht umgekehrt. Das ist Hierarchie. Im zweiten gibt es eine zusätzliche Linie — McCulloch nannte sie Diallele —, die vom innersten zum äußersten Kreis führt. Jetzt kann der innere den äußeren hemmen. Eine Linie. Und alles ändert sich.</p>
+
+  <p>Fünfzig Jahre später, 1993, übertrug Heinz von Foerster diese Entdeckung auf Kommunikation. Er fragte: Wenn Nervensysteme diese Struktur haben können — können Kommunikationssysteme sie auch haben? Seine Antwort: Ja. Und sie müssen sie haben, wenn sie sich selbst beobachten wollen.</p>
+
+  <h2>Zwei Schleifen</h2>
+
+  <p>Von Foerster beschrieb die erste Schleife am Nervensystem: sensorimotorisch — Sinnesorgane, Nerven, Motorik, Umwelt, zurück zu den Sinnesorganen. Die zweite ist neuroendokrin — Steroide verändern, wie die erste überträgt. Zwei Schleifen, quer zueinander, keine auf die andere zurückführbar.</p>
+
+  <p>In der Kommunikation sieht das so aus: Die erste Schließung ist die operative Verbindung. Kommunikation schließt an Kommunikation an. Einer sagt etwas, ein anderer versteht es, sagt etwas zurück. Der Kreis schließt sich. Das System reproduziert sich.</p>
+
+  <p>Die zweite Schließung moduliert, wie die erste operiert. Sie verändert nicht, was kommuniziert wird, sondern wie. Nicht den Inhalt, sondern den Modus. Sie operiert auf der Anschlussregel — auf der impliziten Ordnung, die bestimmt, was sagbar ist und was nicht.</p>
+
+  <blockquote>Die erste Schleife geht um das System herum. Die zweite geht durch es hindurch. Man kann die eine nicht in die andere übersetzen.</blockquote>
+
+  <p>Was das konkret bedeutet: Die erste Schließung allein erzeugt ein System, das operiert, ohne sich zu sehen. Es kommuniziert, es reproduziert sich, es bildet stabile Formen aus — aber es kann seine eigenen Unterscheidungen nicht als Unterscheidungen erkennen. Der blinde Fleck ist strukturell: nicht weil jemand nicht hinschaut, sondern weil die Verbindung fehlt, die das Hinschauen ermöglichen würde.</p>
+
+  <h2>Die Diallele</h2>
+
+  <p>McCullochs Diallele ist diese Verbindung. In neuronalen Netzen ist sie eine synaptische Verbindung. In der Kommunikation ist sie die Verbindung, die es einem System ermöglicht, seine eigene Anschlussregel als Anschlussregel zu sehen — nicht als Boden, auf dem man steht, sondern als Behauptung, die geprüft werden kann.</p>
+
+  <p>Ohne Diallele bleibt es bei der Hierarchie. Der äußere Kreis — die geltende Ordnung, die Gewissheit — hemmt den inneren. Wer zweifelt, wird nicht durch ein Argument gehemmt, sondern durch die Bauweise. Seine Sätze finden keinen Anschluss. Sie verhallen.</p>
+
+  <p>Mit Diallele entsteht Heterarchie. Der innere Kreis kann jetzt den äußeren hemmen. Die Frage kann die Antwort in Frage stellen. Die Herrschaft wandert — nicht weil jemand sie abgibt, sondern weil die Bauweise es zulässt.</p>
+
+  <div class="contrast">
+    <div>
+      <span class="label">Ohne die Verbindung</span>
+      Eine Schleife läuft, die andere ist offen. Das System reproduziert sich, kann sich aber nicht selbst sehen. Beobachtung erster Ordnung. Die Anschlussregel operiert unsichtbar.
+    </div>
+    <div>
+      <span class="label">Mit der Verbindung</span>
+      Beide Schleifen laufen und greifen ineinander. Das System kann seine eigene Operationsweise beobachten. Beobachtung zweiter Ordnung. Die Anschlussregel wird sichtbar — als Unterscheidung, nicht als Boden.
+    </div>
+  </div>
+
+  <p>Für den einzelnen Anschluss ist die Sache eindeutig: Entweder der Zweifel erreicht die Gewissheit, oder er verhallt. Ein Drittes gibt es an dieser Stelle nicht. Über die Zeit hinweg ist es das nicht — deshalb wird an Anschlüssen geprüft und nicht an Stimmungen.</p>
+
+  <h2>Was die Diallele herstellt</h2>
+
+  <p>McCulloch konnte für Nervensysteme sagen, was die Diallele ist: eine synaptische Verbindung. Von Foerster konnte die Anordnung beschreiben, aber nicht sagen, was in der Kommunikation diese Verbindung herstellt. Er hinterließ die Frage als Aufgabe.</p>
+
+  <p>Der semantische Marker ist eine Antwort auf diese Frage. Wenn ein Marker vital operiert — wenn er nicht nur zirkuliert, sondern die Anschlussregel sichtbar macht, statt sie zu reproduzieren —, dann stellt er die Verbindung her, die McCulloch Diallele nannte. Er operiert als Diallele — nicht indem er Information hinzufügt, sondern indem er die Verbindung herstellt, die den Kreis schließt: die Möglichkeit, dass der Zweifel die Gewissheit hemmt.</p>
+
+  <p>Dass diese Verbindung hergestellt wird, ist nicht selbstverständlich. Es braucht ein geteiltes Feld, es braucht strukturierte Offenheit, und es braucht einen Marker, der in diesem Feld vital operiert. Die Bedingungen sind anspruchsvoll — und die Asymmetrie ist konstitutiv: Öffnung braucht alles gleichzeitig, Schließung braucht nur eine fehlende Bedingung.</p>
+
+  <h2>Drei Zustände</h2>
+
+  <p>Die doppelte Schließung ermöglicht eine Unterscheidung, die über die Grammatik der Marker hinausgeht. Drei Zustände — nicht als moralische Diagnose, sondern als Strukturbeschreibung, wie Aggregatzustände der Materie.</p>
+
+  <div class="contrast">
+    <div>
+      <span class="label">Vital</span>
+      Durch den Marker führt, jetzt, der Rückweg: Das System kann seine eigene Anschlussregel sehen — und verändern oder bestätigen. Die Herrschaft wandert. Vitalität ist ein Ereignis, kein Dauerzustand: Die meisten Formen sind die meiste Zeit nicht vital, und das ist Gesundheit. Gesund ist ein Raum, der seine Regel erreichen <em>kann</em> — nicht einer, der sie ständig anfasst.
+    </div>
+    <div>
+      <span class="label">Erstarrt</span>
+      Der Marker zirkuliert, aber er trägt nicht mehr: Durch ihn führt kein Rückweg zur Regel. Die Wiederholung prüft nur noch, ob das Wort gängig ist — nicht, ob durch es hindurch noch gesehen wird. Solange niemand widerspricht, klingt das genau wie Gesundheit.
+    </div>
+  </div>
+
+  <p>Erstarren kann eine Form auf zwei Wegen: weil die Bedingungen fehlen — kein geteiltes Feld, keine strukturierte Offenheit —, oder mitten im besten Feld, durch bloßes Abschleifen im Gebrauch; nichts in der Form selbst verhindert es.</p>
+
+  <p>Und die Unterscheidung hat eine zweite Ebene. Erstarrt ist ein Wort. Ein Raum, in dem die Züge, die die Regel erreichen könnten, als Klasse ausgestorben sind, ist mehr als das: Er ist versteinert — die Formen werden noch gesprochen, und nichts kann mehr durch sie hindurch.</p>
+
+  <p>Und es gibt einen dritten Fall. Bei der Blockade fehlt der Weg, weil er aktiv verschlossen wird. Die Macht hält das System diesseits der Verbindung — nicht indem sie Argumente unterdrückt, sondern indem sie den Weg blockiert, der den Kreis schließen könnte. Erstarrung und Versteinerung sind Zustände: Sie halten sich selbst, weil niemand mehr etwas tun muss. Blockade ist eine Operation auf der Verbindung selbst: Sie muss vollzogen werden, jedes Mal neu. Und eine Blockade, die lange genug steht, muss es irgendwann nicht mehr — was nicht mehr versucht wird, wird bald nicht mehr reproduziert, und aus dem lauten Weg ist der stille geworden.</p>
+
+  <div class="horizon">
+    <h2>Was dieser Zettel nicht zeigt</h2>
+    <p>Was genau geschieht, wenn die Perspektive kippt — wenn das, was im Vollzug die Kommunikation treibt, in der Selbstbeobachtung zum Feld wird und umgekehrt — zeigt der Zettel <a href="rollentausch.html"><em>Rollentausch</em></a>.</p>
+    <p>Was den Moment beschreibt, in dem die Anschlussregel sich im Vollzug transformiert — und warum er sich nicht steuern lässt — zeigt der Zettel <a href="umschlag.html"><em>Umschlag</em></a>.</p>
+    <p>Und wann ein Marker vital operiert — was den Unterschied macht zwischen einem Wort, das zirkuliert, und einem, das die Selektivität sichtbar macht — zeigt der Zettel <a href="semantische-marker.html"><em>Semantische Marker</em></a>.</p>
+    <p>Die formale Durchführung — die Topologie, in der diese beiden Schleifen beschrieben werden, und warum der Unterschied dort ein Unterschied der Fläche ist — steht im Aufsatz unten. Sie wird hier nicht gebraucht, um die Unterscheidung zu verstehen.</p>
+  </div>
+
+  <div class="related">
+    <h3>Verwandte Zettel</h3>
+    <ul>
+      <li><a href="umschlag.html">Umschlag</a> <span>— Der Moment, in dem sich verändert, was sagbar ist</span></li>
+      <li><a href="semantische-marker.html">Semantische Marker</a> <span>— Der Punkt, an dem sich entscheidet, was als Nächstes noch gehen kann</span></li>
+      <li><a href="gruppendynamik.html">Gruppendynamik</a> <span>— Beginnt dort, wo die entscheidbaren Fragen aufhören</span></li>
+      <li><a href="gruppe.html">Gruppe</a> <span>— Vollzug gemeinsamer Selbstbeobachtung, nicht Zustand</span></li>
+      <li><a href="rollentausch.html">Rollentausch</a> <span>— Wenn im Sehen zum Feld wird, was im Lauf noch getrieben hat</span></li>
+      <li><a href="raum.html">Raum</a> <span>— Was da ist, wenn keine Gruppe da ist</span></li>
+    </ul>
+  </div>
+
+  <div class="source-block">
+    <strong style="font-weight:600;color:var(--text-soft);">Öffentlich durchgeführt in</strong> (frei zugänglich): Arpasi, Alexander: <em>Double Closure and Resonance: Von Foerster's Topology as Epistemological Key to Group Dynamics.</em> SSOAR, 2025, Preprint. <a href="https://nbn-resolving.org/urn:nbn:de:0168-ssoar-106693-4" target="_blank" rel="noopener" style="color: var(--accent-light); border-bottom: 1px solid var(--rule);">Volltext →</a>
+  </div>
+</main>
+
+<footer>
+  <span>&copy; 2026 Alexander Arpasi</span>
+  <span><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a> · <a href="https://www.linkedin.com/in/alexander-arpasi-34238b221" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://orcid.org/0009-0005-6454-1484" target="_blank" rel="noopener">ORCID</a></span>
+</footer>
+
+</body>
+</html>

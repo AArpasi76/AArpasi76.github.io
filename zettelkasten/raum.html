@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raum — Alexander Arpasi</title>
+<meta name="description" content="Wenn keine Gruppe da ist, ist nicht nichts da. Der Raum ist die laufende Kommunikation, gesehen als das, was sie hinterlässt — mit einer Anschlussregel, die bestimmt, was hier gesagt werden kann.">
+<meta name="keywords" content="Raum, kommunikatives Feld, Anschlussregel, strukturelle Kopplung, Team, Gruppe, Zugehörigkeit, Systemtheorie, Alexander Arpasi">
+<meta name="robots" content="index, follow, max-snippet:-1">
+<link rel="canonical" href="https://alexanderarpasi.de/zettelkasten/raum.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Raum",
+  "headline": "Raum",
+  "alternativeHeadline": "Was da ist, wenn keine Gruppe da ist",
+  "description": "Der Raum — in der Forschung: das kommunikative Feld — ist die laufende Kommunikation, gesehen als stehende Gestalt: eine Anschlussregel, die bestimmt, was Anschluss findet und was nicht. Zugehörigkeit ist funktional, nicht formal.",
+  "author": { "@type": "Person", "name": "Alexander Arpasi", "url": "https://alexanderarpasi.de", "sameAs": ["https://orcid.org/0009-0005-6454-1484"] },
+  "datePublished": "2026-08-09",
+  "inLanguage": "de",
+  "isPartOf": { "@type": "WebSite", "name": "Alexander Arpasi — Zettelkasten" },
+  "about": [
+    { "@type": "DefinedTerm", "name": "Raum", "description": "Die laufende Kommunikation, gesehen als das, was sie hinterlässt: eine stehende Gestalt, deren operativer Kern die Anschlussregel ist. In der Forschung: kommunikatives Feld.", "disambiguatingDescription": "Nicht Lewins und nicht Bourdieus Feld: dort ist das Feld da, bevor gesprochen wird, und bleibt im Schweigen; hier entsteht es mit dem ersten Satz und vergeht mit dem letzten." },
+    { "@type": "DefinedTerm", "name": "Anschlussregel", "description": "Die implizite Regel, die bestimmt, was in einem Feld Anschluss findet und was nicht. Sie steht nirgends geschrieben und ist doch wirksam." }
+  ]
+}
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+  :root {
+    --bg: #faf9f6;
+    --text: #1e1e1e;
+    --text-soft: #5e5a54;
+    --accent: #4a3f35;
+    --accent-light: #7d7268;
+    --rule: #d6d0c7;
+    --surface: #f0ede8;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'EB Garamond', Georgia, serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  nav {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.8rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  nav .site-name {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  nav .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  nav .nav-links a {
+    font-size: 0.85rem;
+    color: var(--text-soft);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  nav .nav-links a:hover { color: var(--text); }
+  nav .nav-links a.active {
+    color: var(--accent);
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 2px;
+  }
+  .nav-rule {
+    max-width: 900px;
+    margin: 0 auto;
+    border: none;
+    border-top: 1px solid var(--rule);
+  }
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 3rem 2rem 4rem;
+  }
+  h1 {
+    font-size: 2.6rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 2.5rem;
+  }
+  .answer-capsule {
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: var(--text);
+    margin-bottom: 3rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .answer-capsule .lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.6rem;
+  }
+  h2 {
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--text);
+    margin-top: 3rem;
+    margin-bottom: 1.2rem;
+  }
+  p {
+    font-size: 1.05rem;
+    margin-bottom: 1.15rem;
+    text-align: left;
+  }
+  em { font-style: italic; }
+  blockquote {
+    margin: 2rem 0;
+    padding: 0 0 0 1.5rem;
+    border-left: 2px solid var(--rule);
+    font-style: italic;
+    font-size: 1.08rem;
+    color: var(--text-soft);
+    line-height: 1.7;
+  }
+  .abgrenzung {
+    margin: 2rem 0;
+    padding: 1.2rem 1.4rem;
+    background: var(--surface);
+    border-left: 3px solid var(--accent-light);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  .abgrenzung strong { font-weight: 600; }
+  .contrast {
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--rule);
+  }
+  .contrast > div {
+    padding: 1.4rem 1.5rem;
+    background: var(--bg);
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+  .contrast > div:last-child {
+    background: var(--surface);
+  }
+  .contrast .label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-light);
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  .horizon {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+  }
+  .horizon h2 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: var(--accent-light);
+    font-weight: 400;
+  }
+  .horizon p {
+    font-size: 0.98rem;
+    color: var(--text-soft);
+    line-height: 1.7;
+  }
+  .related {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+  }
+  .related h3 {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent-light);
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  .related ul { list-style: none; }
+  .related li {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-soft);
+  }
+  .related a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    transition: border-color 0.2s;
+  }
+  .related a:hover { border-color: var(--accent); }
+  .related li span {
+    color: var(--accent-light);
+    font-size: 0.88rem;
+  }
+  .source-block {
+    margin-top: 2.5rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.82rem;
+    color: var(--accent-light);
+    line-height: 1.6;
+  }
+  footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--accent-light);
+  }
+  footer a {
+    color: var(--accent-light);
+    text-decoration: none;
+  }
+  footer a:hover { color: var(--text); }
+  @media (max-width: 640px) {
+    nav { padding: 1.2rem 1.2rem; }
+    nav .nav-links { gap: 1.2rem; }
+    main { padding: 2rem 1.2rem 3rem; }
+    h1 { font-size: 2rem; }
+    .answer-capsule { font-size: 1.05rem; }
+    .answer-capsule .lead { font-size: 1.12rem; }
+    .contrast { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 0.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="site-name">Alexander Arpasi</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Zettelkasten</a></li>
+    <li><a href="../index.html#arbeiten">Arbeiten</a></li>
+  </ul>
+</nav>
+<hr class="nav-rule">
+
+<main>
+  <h1>Raum</h1>
+
+  <div class="answer-capsule">
+    <span class="lead">Wenn keine Gruppe da ist, ist nicht nichts da.</span>
+    Zwischen den Beteiligten läuft etwas, das ihre Sätze trägt oder fallen lässt — und es lief schon, bevor der Erste den Raum betrat. Es hat keine Mitgliederliste, keinen Ort und keinen Autor. Es hat eine Regel.
+  </div>
+
+  <div class="abgrenzung">
+    <strong>Warum hier nicht <em>Feld</em> steht.</strong> Kurt Lewin und Pierre Bourdieu haben dem Feldbegriff seine sozialwissenschaftliche Kraft gegeben: Lewin holte das Wort aus der Physik und bestand als Erster darauf, dass Verhalten aus der ganzen Lage zu erklären ist und nicht aus Personen; Bourdieu machte daraus die Analyse historisch gewachsener Beziehungsgefüge — keine Behälter, das muss man ihm lassen. Bei beiden aber ist das Feld da, <em>bevor</em> gesprochen wird, und es bleibt, wenn geschwiegen wird. Was hier gemeint ist, ist aus anderem Stoff: Es entsteht mit dem ersten Satz und vergeht mit dem letzten. Darum trägt hier das Wort <em>Raum</em>. Die Forschung nennt dieselbe Sache ein kommunikatives Feld — es ist dasselbe, zweimal gesehen: <em>Raum</em> sagt, wie es sich von innen anfühlt, <em>Feld</em> sagt, was es ist.
+  </div>
+
+  <h2>Ein Ding, zweimal gesehen</h2>
+
+  <p>Wenn hier <em>Raum</em> steht, sind nicht die Wände gemeint. Gemeint ist das, was zwischen den Sprechenden läuft, solange gesprochen wird — das, was Ihren Satz trägt oder fallen lässt. Man kann es nicht betreten und nicht anfassen; man kann nur darin sprechen. Und man merkt nach zehn Minuten, was hier sagbar ist und was besser nicht, ohne dass es einem jemand gesagt hätte.</p>
+
+  <p>Es hat zwei Gesichter, und beide gehören zu einer Sache. Das erste ist die Kopplung: Kommunikation schließt an Kommunikation an, jemand sagt etwas, jemand nimmt es auf, und aus der Aufnahme wird das Nächste. Das zweite ist die stehende Gestalt, die dieses Anschließen hinterlässt — denn Kopplungen wiederholen sich, und Wiederholung hinterlässt eine Form. Ein Kreis, der seine Fragen seit Jahren nach Rang entscheidet, bietet andere Anschlussstellen als einer, der sie offen entscheidet.</p>
+
+  <p>Der operative Kern dieser Gestalt ist die <em>Anschlussregel</em>: was hier Anschluss findet und was nicht. Sie steht nirgends geschrieben, sie ist kein Leitbild und keine Tagesordnung, und sie ist auch nicht die Summe der Absichten der Anwesenden. Man findet sie nur, indem man zuhört, was geschieht — welche Sätze getragen werden und welche fallen.</p>
+
+  <blockquote>Sätze fallen nicht, weil sie schlecht sind. Sie fallen, wenn der Raum sie nicht trägt.</blockquote>
+
+  <h2>Geschlossen heißt nicht unerreichbar</h2>
+
+  <p>Zehn Menschen in einem Raum sind zehn operativ geschlossene Systeme. Kein Gedanke geht hinüber; was beim anderen ankommt, ist nie das Gemeinte, sondern nur das Gesagte. So weit die bekannte Auskunft — und an dieser Stelle wird sie meistens falsch verstanden.</p>
+
+  <p>Geschlossen heißt nicht unerreichbar. Es heißt: Es geht keine Operation über. Maturana hat dafür ein Bild, das man nicht vergisst: Eine Katze läuft über eine Klaviertastatur. Das Klavier bestimmt nicht, welche Töne entstehen — es bestimmt nicht einmal, dass die Katze weiterläuft. Was geschieht, entscheidet die Struktur der Katze, nicht die Berührung. Die Berührung löst aus; was sie auslöst, steht woanders geschrieben.</p>
+
+  <p>Genau deshalb kann es überhaupt einen solchen Raum geben. Nicht weil etwas übertragen würde — es wird nie etwas übertragen —, sondern weil sich Auslösungen wiederholen und dabei eine Form hinterlassen. Wer die Schließung als Mauer liest, bekommt zehn Einsamkeiten und keinen Raum. Wer sie als Auslösung liest, bekommt eine Erklärung dafür, wieso zwischen Unerreichbaren trotzdem etwas Stehendes entsteht.</p>
+
+  <h2>Wer dazugehört</h2>
+
+  <p>Ein Raum hat keine Mitgliederliste. Zugehörigkeit ist funktional, nicht formal: Wer einen Beitrag einbringt, der Anschluss findet, gehört in diesem Moment dazu — und wer auf der Einladung steht, dessen Beiträge aber regelmäßig fallen, gehört weniger dazu, als die Liste behauptet. Die ältere Dame, die in der U-Bahn ein Wort sagt, das die Spieler aufnehmen, ist Teil des Raums. Der Kollege, der seit Monaten in jeder Sitzung sitzt und dessen Einwände höflich quittiert und nicht weitergedreht werden, ist es nicht.</p>
+
+  <p>Daraus folgt etwas für die Wörter, mit denen Organisationen sich selbst beschreiben. Wer <em>Team</em> sagt, meint fast immer eine Zählung: Namen, Zuständigkeiten, ein Kalendereintrag, eine Zeile im Organigramm. Und dasselbe Wort <em>Gruppe</em> hat zwei Lesarten, die der Alltag regelmäßig verwechselt. Als Zählung gelesen ist eine Gruppe eine Menge von Leuten — man kann sie einrichten, umbesetzen und auflösen. Als Vollzug gelesen ist sie ein Ereignis: der Moment, in dem ein Raum seine eigene Regel erreicht. Die Zählung sagt nichts darüber, ob der zweite Fall je eintritt. Deshalb bewegt eine Maßnahme, die an der Liste ansetzt, nichts an dem, was zwischen den Leuten läuft.</p>
+
+  <div class="contrast">
+    <div>
+      <span class="label">Behälter</span>
+      Eine Zählung. Mitglieder, ein Raum, eine Liste. Man kann ihn einrichten, umbauen und auflösen — durch Entscheidung, von außen, an einem Nachmittag.
+    </div>
+    <div>
+      <span class="label">Vollzug</span>
+      Ein Geschehen mit Gedächtnis. Keine Grenze, keine Liste; es entsteht im Anschließen und vergeht, wenn niemand mehr hineinspricht. Einrichten lässt es sich nicht.
+    </div>
+  </div>
+
+  <h2>Was ein Raum bereithält</h2>
+
+  <p>Ein Raum hält mehr bereit, als seine Regel gerade auswählt. Was hier gesagt werden <em>könnte</em>, und was hier gesagt <em>wird</em>, sind zwei verschiedene Größen — und die zweite ist immer die kleinere. Was in Reserve liegt, wurde einmal geübt, erzählt, weitergegeben; es wird nicht gebraucht, aber es ist abrufbar.</p>
+
+  <p>Diese Differenz sieht man im Normalbetrieb nicht. Was nicht ausgewählt wird, zeigt sich nicht — das ist keine Nachlässigkeit der Beobachtung, sondern liegt in der Sache. Sie entscheidet aber darüber, ob ein Raum etwas findet, wenn die Lage sich ändert und die alte Regel nichts mehr hergibt. Zwei Räume können im ruhigen Betrieb ununterscheidbar aussehen — dieselbe enge Regel, dieselben wenigen Anschlussarten, dieselbe reibungslose Oberfläche — und sich unter Druck als vollkommen verschieden erweisen.</p>
+
+  <div class="horizon">
+    <h2>Was dieser Zettel nicht zeigt</h2>
+    <p>Das Ereignis, in dem ein Raum seine eigene Regel erreicht und dabei zu etwas wird, das sich selbst beobachtet — zeigt der Zettel <a href="gruppe.html"><em>Gruppe</em></a>.</p>
+    <p>Woran sich die Anschlussregel organisiert und was den Unterschied macht zwischen einem Wort, das zirkuliert, und einem, das die Selektivität sichtbar macht — zeigt der Zettel <a href="semantische-marker.html"><em>Semantische Marker</em></a>.</p>
+    <p>Und was geschieht, wenn ein Raum lange sehr gut läuft und dabei die Reserve verliert, aus der es im Ernstfall schöpfen müsste — daran wird gerade gearbeitet.</p>
+  </div>
+
+  <div class="related">
+    <h3>Verwandte Zettel</h3>
+    <ul>
+      <li><a href="gruppe.html">Gruppe</a> <span>— Das Ereignis, in dem ein Raum seine eigene Regel erreicht</span></li>
+      <li><a href="gruppendynamik.html">Gruppendynamik</a> <span>— Beginnt dort, wo die entscheidbaren Fragen aufhören</span></li>
+      <li><a href="semantische-marker.html">Semantische Marker</a> <span>— Der Punkt, an dem sich entscheidet, was als Nächstes noch gehen kann</span></li>
+      <li><a href="umschlag.html">Umschlag</a> <span>— Der Moment, in dem sich verändert, was sagbar ist</span></li>
+      <li><a href="nacht-1970.html">Die Nacht, in der der Plan starb</a> <span>— Szene: ein Raum, der seine Regel wechselt</span></li>
+    </ul>
+  </div>
+
+  <div class="source-block">
+    <strong style="font-weight:600;color:var(--text-soft);">Öffentlich durchgeführt in</strong> (frei zugänglich): Arpasi, Alexander: <em>Resonanz statt Steuerung: Semantische Marker, strukturierte Offenheit und eine andere Perspektive auf Gruppendynamik.</em> SSOAR, 2026, Preprint. <a href="https://nbn-resolving.org/urn:nbn:de:0168-ssoar-108078-3" target="_blank" rel="noopener" style="color: var(--accent-light); border-bottom: 1px solid var(--rule);">Volltext →</a><br>
+    <strong style="font-weight:600;color:var(--text-soft);">Und in</strong>: Arpasi, Alexander: <em>Gruppen als Resonanz: Semantische Marker, Selbstbeobachtung und kollektive Intelligenz.</em> SSOAR, 2025, Preprint. <a href="https://nbn-resolving.org/urn:nbn:de:0168-ssoar-105232-8" target="_blank" rel="noopener" style="color: var(--accent-light); border-bottom: 1px solid var(--rule);">Volltext →</a>
+  </div>
+</main>
+
+<footer>
+  <span>&copy; 2026 Alexander Arpasi</span>
+  <span><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a> · <a href="https://www.linkedin.com/in/alexander-arpasi-34238b221" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://orcid.org/0009-0005-6454-1484" target="_blank" rel="noopener">ORCID</a></span>
+</footer>
+
+</body>
+</html>
